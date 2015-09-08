@@ -124,7 +124,7 @@ app.get( '/become', function ( req, res )
     }, function ( error )
     {
         console.log( error );
-        res.send( "failed to become more than a man" );
+        res.send( "failed to become user1" );
     } );
 } );
 
