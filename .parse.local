@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "stackoverflow_test"
+    },
+    "stackoverflow_test": {
+      "applicationId": "KUMGDGndsDIusutcrlpxCmmkVkUNoEYIos7ObaGe"
+    }
+  }
+}
