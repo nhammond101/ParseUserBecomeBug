@@ -11,7 +11,7 @@ app.set( 'views', 'cloud/views' );  // Specify the folder to find templates
 app.set( 'view engine', 'ejs' );    // Set the template engine
 app.use( parseExpressHttpsRedirect() );
 app.use( express.bodyParser() );    // Middleware for reading request body
-app.use( express.cookieParser( 'appa_cookie' ) );
+app.use( express.cookieParser( 'test_cookie_1' ) );
 //app.use( parseExpressCookieSession( {fetchUser: true} ) );
 app.use( parseExpressCookieSession( {cookie: {maxAge: 3600000}, fetchUser: true} ) );
 app.use( express.cookieSession() );   //Cookies
@@ -22,7 +22,6 @@ app.get( '/', function ( req, res )
 
     console.log( "/ called root" );
     res.redirect( '/login' );
-    //res.send("hererererere");
 } );
 
 // This is an example of hooking up a request handler with a specific request
@@ -129,11 +128,6 @@ app.get( '/become', function ( req, res )
     } );
 } );
 
-// // Example reading from the request body of an HTTP post request.
-// app.post('/test', function(req, res) {
-//   // POST http://example.parseapp.com/test (with request body "message=hello")
-//   res.send(req.body.message);
-// });
 
 // Attach the Express app to Cloud Code.
 app.listen();
